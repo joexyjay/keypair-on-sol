@@ -44,7 +44,7 @@ if (!suppliedPublicKey) {
 
 async function checkBalance() {
     try {
-        const connection = new Connection("https://api.mainnet-beta.solana.com", "confirmed");
+        const connection = new Connection("https://api.devnet.solana.com", "confirmed");
         const publicKey = new PublicKey(suppliedPublicKey);
         const balanceInLamports = await connection.getBalance(publicKey);
         const balanceInSOL = balanceInLamports / LAMPORTS_PER_SOL;
